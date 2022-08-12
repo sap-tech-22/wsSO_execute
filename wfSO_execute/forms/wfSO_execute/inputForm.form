@@ -1,0 +1,92 @@
+{
+    "id": "inputform",
+    "schemaVersion": "1.1.0",
+    "name": "inputForm",
+    "revision": "v1",
+    "type": "task",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "id",
+            "type": "string",
+            "label": "ID",
+            "readOnly": true,
+            "value": "${context.ID}",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "id": "customerid",
+            "type": "string",
+            "label": "customerID",
+            "readOnly": true,
+            "value": "${context.customerID}",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "id": "productid",
+            "type": "string",
+            "label": "productID",
+            "readOnly": false,
+            "value": "${context.productID}",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "id": "quantity",
+            "type": "integer",
+            "label": "quantity",
+            "readOnly": false,
+            "value": "${context.quantity}",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "id": "unitprice",
+            "type": "integer",
+            "label": "unitPrice",
+            "readOnly": false,
+            "value": "${context.unitPrice}",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "id": "total",
+            "type": "string",
+            "label": "decisionText",
+            "readOnly": false,
+            "value": "${context.decisionText}",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "id": "process_immediately",
+            "type": "boolean",
+            "label": "Process Immediately",
+            "readOnly": false,
+            "value": "${context.immediate}",
+            "constraints": {
+                "required": false
+            }
+        }
+    ],
+    "decisions": [
+        {
+            "id": "approve",
+            "text": "Approve",
+            "decisionType": "positive"
+        },
+        {
+            "id": "reject",
+            "text": "Reject",
+            "decisionType": "negative"
+        }
+    ]
+}
