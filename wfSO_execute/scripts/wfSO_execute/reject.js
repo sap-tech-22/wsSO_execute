@@ -1,3 +1,4 @@
+var totalPrice = $.context.quantity * $.context.unitPrice;
 
 var data = {
     ID: $.context.ID,
@@ -5,9 +6,12 @@ var data = {
     productID: $.context.productID,
     quantity: $.context.quantity,
     unitPrice: $.context.unitPrice,
+    totalPrice: totalPrice,
     decisionText: $.context.decisionText,
     decisionStatus: 'Rejected'
 };
+
+
 
 $.context.data = data;
 
